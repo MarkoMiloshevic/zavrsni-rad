@@ -58,9 +58,9 @@ const ZaposleniComponent = ({}) => {
     ];
 
     return (
-        <Container>
-            <Row>
-                <Col>
+        <div className="container">
+            <div className="row">
+                <div className="col">
                     <div className="zaposleni">
                         <DataTable
                             title="Zaposleni"
@@ -69,9 +69,9 @@ const ZaposleniComponent = ({}) => {
                             pagination
                         />
                     </div>
-                </Col>
-            </Row>
-        </Container>
+                </div>
+            </div>
+        </div>
     );
 }
 

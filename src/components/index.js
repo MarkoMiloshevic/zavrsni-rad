@@ -25,13 +25,13 @@ const MainComponent = () => {
   }
 
   return (
-    <Container className="p-0" fluid={true}>
-      <Row>
-        <Col>
+    <div className="container-fluid p-0 m-0">
+      <div className="row">
+        <div className="col">
             {loginHandler()}
-        </Col>
-      </Row>
-    </Container>
+        </div>
+      </div>
+    </div>
   );
 }
 

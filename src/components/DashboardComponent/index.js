@@ -1,15 +1,15 @@
 import React, {useState} from 'react';
-import { Nav, Navbar, Form, FormControl, Button } from 'react-bootstrap';
-
 import ZaposleniComponent from '../ZaposleniComponent';
 import PlateComponent from '../PlateComponent';
 import RadnaMestaComponent from '../RadnaMestaComponent';
+import '../../style/DashboardComponent.css';
+import logo from '../../assets/logo.png';
 
 
 
 const DashboardComponent = ({setGoodLogin, loginUsername}) => {
 
-    const [ selectedPage, setSelectedPage ] = useState('');
+    const [ selectedPage, setSelectedPage ] = useState('zaposleni');
 
     const showPageHandler = () => {
         if (selectedPage === "zaposleni") {
@@ -28,15 +28,15 @@ const DashboardComponent = ({setGoodLogin, loginUsername}) => {
     }
 
     return (
-        <div className="login-component">
-            <Navbar bg="dark" variant="dark">
-                <Navbar.Brand href="#home">Hello {loginUsername}</Navbar.Brand>
-                <Nav className="mr-auto">
-                <Nav.Link onClick={() => setSelectedPage('zaposleni')} href="#zaposleni">Zaposleni</Nav.Link>
-                <Nav.Link onClick={() => setSelectedPage('plate')} href="#plate">Plate</Nav.Link>
-                <Nav.Link onClick={() => setSelectedPage('radna_mesta')} href="#radnamesta">Radna Mesta</Nav.Link>
-                </Nav>
-            </Navbar>
+        <div className="dashboard-component">
+            <div className="navbar text-light p-0 m-0">
+                <div className="navbar-brand" href="zaposleni"><img className="navbar_brand_logo" src={logo} /></div>
+                <div className="nav">
+                <div className="nav-link" onClick={() => setSelectedPage('zaposleni')} href="#zaposleni">Zaposleni</div>
+                <div className="nav-link" onClick={() => setSelectedPage('plate')} href="#plate">Plate</div>
+                <div className="nav-link" onClick={() => setSelectedPage('radna_mesta')} href="#radnamesta">Radna Mesta</div>
+                </div>
+            </div>
             <div className="pages">
                 {showPageHandler()}
             </div>
