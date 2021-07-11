@@ -12,7 +12,7 @@ const PlateComponent = ({}) => {
     const createUser = () => {
         return {
           name: faker.name.findName(),
-          email: faker.internet.email(),
+          salary: faker.finance.amount(),
           address: faker.address.streetAddress(),
           bio: faker.lorem.sentence(),
           image: faker.image.avatar()
@@ -41,8 +41,8 @@ const PlateComponent = ({}) => {
             sortable: true,
         },
         {
-            name: 'Email',
-            selector: 'email',
+            name: 'Plate',
+            selector: 'salary',
             sortable: true,
         },
         {

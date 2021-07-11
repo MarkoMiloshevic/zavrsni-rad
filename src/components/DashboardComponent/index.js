@@ -32,6 +32,10 @@ const DashboardComponent = ({setGoodLogin, loginUsername}) => {
         }
     }
 
+    function logout() {
+        window.location.reload(false);
+      }
+
     return (
         <div className="dashboard-component">
             <div className="navbar text-light p-0 m-0">
@@ -41,7 +45,7 @@ const DashboardComponent = ({setGoodLogin, loginUsername}) => {
                     <div className="nav-link" onClick={() => setSelectedPage('plate')} href="#plate">Plate</div>
                     <div className="nav-link" onClick={() => setSelectedPage('radna_mesta')} href="#radnamesta">Radna Mesta</div>
                 </div>
-                <div className="nav-link logout" onClick={() => setSelectedPage('logout')}>Logout</div>
+                <div className="nav-link logout" onClick={logout}>Logout</div>
             </div>
             <div className="pages">
                 {showPageHandler()}
