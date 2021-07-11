@@ -57,6 +57,29 @@ const RadnaMestaComponent = ({}) => {
         },
     ];
 
+    const customStyles = {
+        header: {
+          style: {
+            backgroundColor: '#232931',
+          }
+        },
+        rows: {
+            style: {
+              backgroundColor: '#232931',
+            }
+          },
+        headCells: {
+            style: {
+              backgroundColor: '#232931',
+            }
+          },
+        pagination: {
+            style: {
+              backgroundColor: '#232931',
+            }
+          },
+      };
+
     return (
         <div className="container">
             <div className="row">
@@ -66,6 +89,8 @@ const RadnaMestaComponent = ({}) => {
                             title="Radna Mesta"
                             columns={columns}
                             data={fakeUsers}
+                            theme="dark"
+                            customStyles={customStyles}
                             pagination
                         />
                     </div>

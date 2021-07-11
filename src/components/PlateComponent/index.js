@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 import DataTable from 'react-data-table-component';
 import faker, { fake } from 'faker';
-
+import '../../style/PlateComponent.css';
 
 
 
@@ -12,7 +12,7 @@ const PlateComponent = ({}) => {
     const createUser = () => {
         return {
           name: faker.name.findName(),
-          email: faker.internet.email(),
+          salary: faker.finance.amount(),
           address: faker.address.streetAddress(),
           bio: faker.lorem.sentence(),
           image: faker.image.avatar()
@@ -57,6 +57,30 @@ const PlateComponent = ({}) => {
         },
     ];
 
+    const customStyles = {
+        header: {
+          style: {
+            backgroundColor: '#232931',
+          }
+        },
+        rows: {
+            style: {
+              backgroundColor: '#232931',
+            }
+          },
+        headCells: {
+            style: {
+              backgroundColor: '#232931',
+            }
+          },
+        pagination: {
+            style: {
+              backgroundColor: '#232931',
+            }
+          },
+      };
+    
+
     return (
         <div className="container">
             <div className="row">
@@ -66,6 +90,8 @@ const PlateComponent = ({}) => {
                             title="Plate"
                             columns={columns}
                             data={fakeUsers}
+                            theme="dark"
+                            customStyles={customStyles}
                             pagination
                         />
                     </div>
