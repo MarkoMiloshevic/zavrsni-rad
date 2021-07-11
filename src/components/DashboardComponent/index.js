@@ -29,7 +29,7 @@ const DashboardComponent = ({setGoodLogin, loginUsername}) => {
 
     return (
         <div className="dashboard-component">
-            <div className="navbar text-light p-0 m-0">
+            <div className="navbar text-light m-0">
                 <div className="navbar-brand" href="zaposleni"><img className="navbar_brand_logo" src={logo} /></div>
                 <div className="nav">
                 <div className="nav-link" onClick={() => setSelectedPage('zaposleni')} href="#zaposleni">Zaposleni</div>

@@ -37,22 +37,22 @@ const PlateComponent = ({}) => {
         },
         {
             name: 'Ime I Prezime',
-            selector: 'name',
+            cell: row => row['name'],
             sortable: true,
         },
         {
             name: 'Email',
-            selector: 'email',
+            cell: row => row['email'],
             sortable: true,
         },
         {
             name: 'Adresa',
-            selector: 'address',
+            cell: row => row['address'],
             sortable: true,
         },
         {
             name: 'Bio',
-            selector: 'bio',
+            cell: row => row['bio'],
             sortable: true,
         },
     ];

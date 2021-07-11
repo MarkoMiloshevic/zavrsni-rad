@@ -1,8 +1,6 @@
-.col {
-    padding-right: 0;
-}
 .navbar{
     background-color: #232931;
+    padding: 0 20px;
 }
 .navbar_brand_logo {
     width: 300px;
